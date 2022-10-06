@@ -13,8 +13,7 @@
 - Laravel　8.x
 
 ## テーブル設計
-
-< --- 作成したテーブル設計の画像 ---- >
+<img width="1064" alt="スクリーンショット 2022-10-06 21 06 05" src="https://user-images.githubusercontent.com/112786056/194308394-b5636fea-3634-4b73-a88d-0dd8185ec8c4.png">
 
 ## ER図
 < --- 作成したER図の画像 ---- >
