@@ -1,6 +1,7 @@
 # Todo List
 タスクを管理するアプリ
 
+<img width="795" alt="スクリーンショット 2022-10-06 20 56 55" src="https://user-images.githubusercontent.com/112786056/194307758-f48f3394-ff98-4058-99f6-be3f5ff4ed0f.png">
 
 ## 作成した目的
 タスクの管理
