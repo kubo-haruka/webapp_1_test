@@ -16,7 +16,4 @@
 <img width="1064" alt="スクリーンショット 2022-10-06 21 06 05" src="https://user-images.githubusercontent.com/112786056/194308394-b5636fea-3634-4b73-a88d-0dd8185ec8c4.png">
 
 ## ER図
-< --- 作成したER図の画像 ---- >
-
-## 他に記載することがあれば記述する
-例） ## 環境構築、## アカウントの種類（テストユーザーなど）
+![index](https://user-images.githubusercontent.com/112786056/194308666-6af0b4d2-522a-417a-9705-af6764923380.png)
