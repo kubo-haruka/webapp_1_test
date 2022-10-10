@@ -16,8 +16,7 @@ class CreateTodosTable extends Migration
         Schema::create('todos', function (Blueprint $table) {
             $table->id();
             $table->string('contents', 20);
-            $table->timestamp('created_at')->useCurrent()->nullable();
-            $table->timestamp('deleted_at')->useCurrent()->nullable();
+            $table->timestamps();
         });
     }
 

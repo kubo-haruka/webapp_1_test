@@ -14,24 +14,25 @@ class TodoController extends Controller
         return view('index', ['list' => $list]);
     }
 
-    public function create(AuthorRequest $index)
+    public function create(TodoRequest $request)
     {
-        $content = $request->all();
-        Author::create($form);
+        $contents = $request->all();
+        unset($contents['_token']);
+        Todo::create($contents);
         return redirect('/');
     }
-    public function update(AuthorRequest $request)
+    public function update(TodoRequest $request)
     {
-        $content = $request->id();
-        unset($form['id']);
-        Author::where('id', $request->id)->save($form);
+        $contents = $request->id();
+        unset($contents['_token']);
+        Todo::where('id', $request->id)->save($form);
         return redirect('/');
     }
-    public function delete(Request $request)
+    public function delete(TodoRequest $request)
     {
-        $content = Author::find($request->id);
+        $updated_at = Todo::find($request->id);
         return view('delete', ['form' => $id]);
-        Author::find($request->id)->delete();
+        Todo::find($request->id)->delete();
         return redirect('/');
     }
 }

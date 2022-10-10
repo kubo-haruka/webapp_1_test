@@ -94,8 +94,8 @@
     <div class="todo">
       <h2>Todo List</h2>
       <form action="/create" method="post">
-      @csrf
-        <input type="text" class="todo_create">
+        @csrf
+        <input name="contents" type="text" class="todo_create">
         <button class="create">追加</button>
       </form>
     </div>
@@ -111,7 +111,7 @@
         <th></th>
         <th>
           <form action="/update">
-            <input type="text" class="todo_update">
+            <input name="created_at" type="text" class="todo_update">
           </form>
         </th>
         <th>
