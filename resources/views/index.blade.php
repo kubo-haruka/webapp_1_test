@@ -93,7 +93,8 @@
   <div class="card">
     <div class="todo">
       <h2>Todo List</h2>
-      <form action="/create">
+      <form action="/create" method="post">
+      @csrf
         <input type="text" class="todo_create">
         <button class="create">追加</button>
       </form>
