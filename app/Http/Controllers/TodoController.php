@@ -10,8 +10,8 @@ class TodoController extends Controller
 {
     public function list()
     {
-        $tododb = todos::all();
-        return view('index', ['list' => $list]);
+        $tododb = Todo::all();
+        return view('index', ['todos' => $tododb]);
     }
 
     public function create(TodoRequest $request)

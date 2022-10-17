@@ -89,7 +89,6 @@
 }
 </style>
 
-@section('content')
 <body>
   <div class="card">
     <div class="todo">
@@ -108,10 +107,10 @@
         <th>更新</th>
         <th>削除</th>
       </tr>
-      @foreach($todos::all() as $todo)
+      @foreach($todos as $todo)
       <tr>
-        <td>{{$todos->created_at}}</td>
-        <td>{{$todos->contents}}</td>
+        <td>{{$todo->created_at}}</td>
+        <td>{{$todo->contents}}</td>
         <td>
           <button class="update">更新</button>
         </td>
@@ -124,7 +123,6 @@
       @endforeach
     </table>
   </div>
-@endsection
 </body>
 
 </html>
