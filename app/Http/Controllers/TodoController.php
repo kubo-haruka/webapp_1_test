@@ -10,7 +10,7 @@ class TodoController extends Controller
 {
     public function list()
     {
-        $id = Author::all();
+        $tododb = todos::all();
         return view('index', ['list' => $list]);
     }
 
@@ -21,17 +21,19 @@ class TodoController extends Controller
         Todo::create($contents);
         return redirect('/');
     }
+
     public function update(TodoRequest $request)
     {
         $contents = $request->id();
         unset($contents['_token']);
-        Todo::where('id', $request->id)->save($form);
+        Todo::where('id', $request->id)->save($contents);
         return redirect('/');
     }
+
     public function delete(TodoRequest $request)
     {
-        $updated_at = Todo::find($request->id);
-        return view('delete', ['form' => $id]);
+        $contents = Todo::find($request->id);
+        return view('delete', ['contents' => $id]);
         Todo::find($request->id)->delete();
         return redirect('/');
     }

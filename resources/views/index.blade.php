@@ -89,6 +89,7 @@
 }
 </style>
 
+@section('content')
 <body>
   <div class="card">
     <div class="todo">
@@ -107,24 +108,23 @@
         <th>更新</th>
         <th>削除</th>
       </tr>
+      @foreach($todos::all() as $todo)
       <tr>
-        <th></th>
-        <th>
-          <form action="/update">
-            <input name="created_at" type="text" class="todo_update">
-          </form>
-        </th>
-        <th>
+        <td>{{$todos->created_at}}</td>
+        <td>{{$todos->contents}}</td>
+        <td>
           <button class="update">更新</button>
-        </th>
-        <th>
+        </td>
+        <td>
           <form action="/delete">
           <button class="delete">削除</button>
           </form>
-        </th>
+        </td>
       </tr>
+      @endforeach
     </table>
   </div>
+@endsection
 </body>
 
 </html>
