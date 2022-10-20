@@ -17,7 +17,6 @@ class TodoController extends Controller
     public function create(TodoRequest $request)
     {
         $contents = $request->all();
-        unset($contents['_token']);
         Todo::create($contents);
         return redirect('/');
     }
