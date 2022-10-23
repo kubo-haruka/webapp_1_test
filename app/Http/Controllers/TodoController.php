@@ -23,9 +23,9 @@ class TodoController extends Controller
 
     public function update(TodoRequest $request)
     {
-        $contents = Todo::find($request->id);
+        $contents = $request->all();
         unset($contents['_token']);
-        $contents->update();
+        Todo::find($request->id)->update($contents);
         return redirect('/');
     }
 
