@@ -110,15 +110,13 @@
       @foreach($todos as $todo)
       <tr>
         <td>{{$todo->created_at}}</td>
-        <td>
-          <form  action="index.blade.php" method="POST">
-            <input name="update" type="text" value="{{ $todo->contents }}">
-          </form>
-        </td>
-        <td>
-          <form>
-            <input name="update" type="hidden" value="{{ $todo->id }}">
-            <button class="update">更新</button>
+        <form action="/update" method="post">
+          <td>
+            <input name="contents" type="text" value="{{ $todo->contents }}">
+          </td>
+          <td>
+            <button class="update" type="submit">更新</button>
+        </form>
           </form>
         </td>
         <td>

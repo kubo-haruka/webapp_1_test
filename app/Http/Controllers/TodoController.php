@@ -21,10 +21,10 @@ class TodoController extends Controller
         return redirect('/');
     }
 
-    public function update(TodoRequest $request)
+    public function update(TodoRequest $id)
     {
-        $contents = $request->id();
-        unset($contents['_token']);
+        $contents = Todo::find($request->id);
+        unset($todo['_token']);
         Todo::where('id', $request->id)->save($contents);
         return redirect('/');
     }
