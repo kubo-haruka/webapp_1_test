@@ -84,12 +84,25 @@
   }
 
   button.delete:hover {
-	background-color: #1cffbb;
-  color: #fff;
+    background-color: #1cffbb;
+    color: #fff;
 }
+
+  .error_massege {
+    background-color: #ff0000;
+    color: #fff;
+  }
+
 </style>
 
 <body>
+  @if (count($errors) > 0)
+    <ul>
+      @foreach ($errors->all() as $error)
+        <p class="error_massege">テキストの入力がありません</p>
+      @endforeach
+    </ul>
+  @endif
   <div class="card">
     <div class="todo">
       <h2>Todo List</h2>
