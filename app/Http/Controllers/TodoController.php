@@ -21,11 +21,11 @@ class TodoController extends Controller
         return redirect('/');
     }
 
-    public function update(TodoRequest $id)
+    public function update(TodoRequest $request)
     {
         $contents = Todo::find($request->id);
-        unset($todo['_token']);
-        Todo::where('id', $request->id)->save($contents);
+        unset($contents['_token']);
+        $contents->update();
         return redirect('/');
     }
 

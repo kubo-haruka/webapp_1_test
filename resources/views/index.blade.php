@@ -111,6 +111,7 @@
       <tr>
         <td>{{$todo->created_at}}</td>
         <form action="/update" method="post">
+        @csrf
           <td>
             <input name="contents" type="text" value="{{ $todo->contents }}">
           </td>
