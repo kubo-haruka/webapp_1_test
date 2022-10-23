@@ -29,11 +29,11 @@ class TodoController extends Controller
         return redirect('/');
     }
 
-    public function delete(TodoRequest $request)
+    public function delete($id)
     {
-        $contents = Todo::find($request->id);
-        return view('delete', ['contents' => $id]);
-        Todo::find($request->id)->delete();
+        $contents = Todo::find($id);
+        unset($contents['_token']);
+        $contents->delete();
         return redirect('/');
     }
 }

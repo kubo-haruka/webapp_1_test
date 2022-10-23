@@ -110,7 +110,7 @@
       @foreach($todos as $todo)
       <tr>
         <td>{{$todo->created_at}}</td>
-        <form action=“{{ route('todo.update', ['id' => $todo->id]) }}” method="post">
+        <form action="{{ route('todo.update', ['id' => $todo->id]) }}" method="post">
         @csrf
           <td>
             <input name="contents" type="text" value="{{ $todo->contents }}">
@@ -121,9 +121,9 @@
           </form>
         </td>
         <td>
-          <form>
-            <input name="delete" type="hidden" value="{{ $todo->id }}">
-            <button class="delete">削除</button>
+          <form  action="{{ route('todo.delete', ['id' => $todo->id]) }}" method="post">
+          @csrf
+            <button class="delete" type="submit">削除</button>
           </form>
         </td>
       </tr>
