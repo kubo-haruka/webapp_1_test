@@ -99,10 +99,11 @@
   @if (count($errors) > 0)
     <ul>
       @foreach ($errors->all() as $error)
-        <p class="error_massege">テキストの入力がありません</p>
+        <li class="error_massege">{{$error}}</li>
       @endforeach
     </ul>
   @endif
+
   <div class="card">
     <div class="todo">
       <h2>Todo List</h2>

@@ -28,4 +28,11 @@ class TodoRequest extends FormRequest
 			'contents' => 'required | max:20',
         ];
     }
+    public function messages()
+    {
+        return [
+            "contents.required" => "テキストは必須項目です。",
+            "contents.max" => "20文字以内で入力してください",
+        ];
+    }
 }
